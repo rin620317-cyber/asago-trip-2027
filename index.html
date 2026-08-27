@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>2027 家族旅行 計画｜畑のおやど 2泊3日</title>
+<meta name="description" content="2027年の家族旅行（2泊3日・10名）の計画ページ。宿の候補、決めること、収支の試算。">
+<meta name="theme-color" content="#0c1712">
+<meta property="og:title" content="2027 家族旅行 計画｜2泊3日">
+<meta property="og:description" content="10名・4世帯。畑のおやどで2泊3日を狙う。宿の候補と収支の試算。">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%84%3C/text%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#0c1712;
+  --card:rgba(255,255,255,.05);
+  --line:rgba(255,255,255,.12);
+  --ink:#eef4ef;
+  --ink-dim:#a9bdb2;
+  --ink-faint:#7b9188;
+  --amber:#e8b04b;
+  --moss:#7cc47f;
+  --mist:#9fd5c8;
+  --clay:#e08a5f;
+  --radius:18px;
+  --shadow:0 10px 30px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:
+    radial-gradient(1100px 620px at 12% -6%, #1d3d2c 0%, transparent 62%),
+    radial-gradient(900px 520px at 94% 6%, #35492f 0%, transparent 56%),
+    linear-gradient(180deg,#0c1712 0%, #0e2018 45%, #0c1712 100%);
+  background-attachment:fixed;
+  color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Hiragino Sans","Noto Sans JP",Meiryo,system-ui,sans-serif;
+  line-height:1.75;
+  -webkit-text-size-adjust:100%;
+  overflow-x:hidden;
+}
+.wrap{max-width:760px;margin:0 auto;padding:0 16px 72px;position:relative;z-index:1}
+
+/* ---------- 朝霧（2026年の星空にあたる背景演出） ---------- */
+#mist{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+#mist .band{position:absolute;left:-25%;width:150%;height:22vh;
+  background:linear-gradient(90deg,transparent,rgba(159,213,200,.13),rgba(255,255,255,.05),transparent);
+  filter:blur(26px);animation:drift 42s linear infinite}
+@keyframes drift{from{transform:translateX(-18%)}to{transform:translateX(18%)}}
+
+/* ---------- hero ---------- */
+.hero{position:relative;padding:44px 0 22px;text-align:center}
+.kicker{display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:.14em;
+  color:var(--amber);border:1px solid rgba(232,176,75,.38);background:rgba(232,176,75,.09);
+  padding:6px 14px;border-radius:999px;font-weight:700}
+h1{font-size:clamp(28px,7.5vw,44px);line-height:1.24;margin:16px 0 6px;font-weight:900;letter-spacing:.01em}
+h1 .grad{background:linear-gradient(100deg,var(--moss),var(--mist) 48%,var(--amber));
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{color:var(--ink-dim);font-size:15px;margin:0 0 20px}
+.hills{width:100%;height:74px;display:block;margin:10px 0 2px}
+
+.facts{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:6px}
+.chip{font-size:12.5px;padding:6px 12px;border-radius:999px;background:var(--card);border:1px solid var(--line);color:var(--ink-dim)}
+.chip b{color:var(--ink);font-weight:800}
+
+.status{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:900;
+  color:#1a1206;background:linear-gradient(100deg,#f3cd82,var(--amber));
+  border-radius:999px;padding:6px 16px;margin:2px 0 18px}
+.status span{font-weight:700;opacity:.72;font-size:11.5px}
+
+/* ---------- nav ---------- */
+nav{position:sticky;top:0;z-index:20;margin:16px -16px 0;padding:10px 16px;
+  background:rgba(12,23,18,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.navrow{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.navrow::-webkit-scrollbar{display:none}
+.navrow a{flex:0 0 auto;font-size:13px;font-weight:700;text-decoration:none;color:var(--ink-dim);
+  padding:7px 14px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.04);white-space:nowrap}
+.navrow a:active{transform:scale(.96)}
+
+/* ---------- sections ---------- */
+section{margin-top:36px;scroll-margin-top:70px}
+.sec-h{display:flex;align-items:baseline;gap:10px;margin-bottom:14px}
+.sec-h h2{font-size:20px;margin:0;font-weight:900;letter-spacing:.02em}
+.sec-h .en{font-size:11px;color:var(--ink-faint);letter-spacing:.18em;text-transform:uppercase}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow)}
+.card+.card{margin-top:12px}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px}
+.stat .k{font-size:11px;color:var(--ink-faint);letter-spacing:.08em}
+.stat .v{font-size:17px;font-weight:900;margin-top:2px}
+.stat .v small{font-size:12px;font-weight:600;color:var(--ink-dim)}
+.desc{font-size:13.5px;color:var(--ink-dim)}
+.desc b{color:var(--ink)}
+
+/* ---------- 宿の候補 ---------- */
+.inns{display:grid;grid-template-columns:1fr;gap:12px}
+@media(min-width:640px){.inns{grid-template-columns:1fr 1fr}}
+.inn{border:1px solid var(--line);border-radius:16px;padding:15px;background:var(--card);position:relative}
+.inn.main{border-color:rgba(124,196,127,.42);background:linear-gradient(140deg,rgba(124,196,127,.11),rgba(159,213,200,.05))}
+.inn .rank{font-size:10.5px;font-weight:900;letter-spacing:.12em;padding:3px 10px;border-radius:999px;
+  background:rgba(0,0,0,.28);border:1px solid var(--line);color:var(--ink-dim)}
+.inn.main .rank{background:rgba(124,196,127,.18);border-color:rgba(124,196,127,.4);color:#bde9bf}
+.inn h3{margin:9px 0 4px;font-size:16px;font-weight:900}
+.inn .meta{font-size:12px;color:var(--ink-faint);margin-bottom:8px}
+.inn p{margin:0;font-size:12.5px;color:var(--ink-dim);line-height:1.75}
+.inn .pending{color:var(--amber);font-weight:700}
+
+/* ---------- todo ---------- */
+.todo{list-style:none;padding:0;margin:0}
+.todo li{display:flex;gap:10px;align-items:flex-start;padding:11px 0;border-bottom:1px solid var(--line);font-size:13.5px;color:var(--ink-dim)}
+.todo li:last-child{border-bottom:none}
+.todo .no{flex:0 0 auto;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;
+  font-size:11px;font-weight:900;background:rgba(232,176,75,.16);border:1px solid rgba(232,176,75,.4);color:var(--amber)}
+.todo b{color:var(--ink)}
+.todo .why{display:block;font-size:12px;color:var(--ink-faint);margin-top:2px}
+
+/* ---------- budget ---------- */
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th,td{padding:9px 8px;border-bottom:1px solid var(--line);text-align:left;vertical-align:middle}
+th{font-size:11px;color:var(--ink-faint);letter-spacing:.08em;font-weight:700}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+tr.grp td{background:rgba(255,255,255,.05);font-weight:900;font-size:12px;letter-spacing:.06em;color:var(--amber);border-bottom:none;padding-top:14px}
+input.money{width:96px;background:rgba(255,255,255,.06);border:1px solid var(--line);color:var(--ink);
+  border-radius:8px;padding:5px 8px;text-align:right;font-size:13.5px;font-variant-numeric:tabular-nums;font-family:inherit}
+input.money:focus{outline:2px solid rgba(232,176,75,.5);outline-offset:1px}
+.note{font-size:11.5px;color:var(--ink-faint);display:block;margin-top:2px}
+.tbd{display:inline-block;font-size:10px;font-weight:800;letter-spacing:.04em;color:var(--amber);
+  border:1px solid rgba(232,176,75,.35);background:rgba(232,176,75,.10);padding:1px 7px;border-radius:6px;margin-left:6px;vertical-align:middle}
+.total{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:14px;padding:14px 16px;border-radius:16px;
+  background:linear-gradient(100deg,rgba(232,176,75,.15),rgba(224,138,95,.10));border:1px solid rgba(232,176,75,.32)}
+.total .lab{font-size:12px;color:var(--ink-dim);letter-spacing:.06em}
+.total .big{font-size:27px;font-weight:900;font-variant-numeric:tabular-nums;line-height:1.2}
+.total .per{font-size:12px;color:var(--ink-dim);text-align:right}
+.btn{display:inline-block;font-size:12px;font-weight:700;color:var(--ink-dim);background:rgba(255,255,255,.06);
+  border:1px solid var(--line);border-radius:999px;padding:6px 14px;cursor:pointer;font-family:inherit}
+
+/* ---------- 世帯 ---------- */
+.split{margin-top:14px;padding:14px 15px;border-radius:16px;background:rgba(159,213,200,.08);border:1px solid rgba(159,213,200,.28)}
+.split-h{font-weight:900;font-size:14px;color:var(--mist);margin-bottom:4px}
+.split-note{font-size:12px;color:var(--ink-dim);margin-bottom:10px;line-height:1.7}
+.split-note b{color:var(--ink)}
+#stable{font-size:13px}
+#stable th,#stable td{padding:8px 6px;border-bottom:1px solid rgba(255,255,255,.10)}
+#stable .who{font-weight:800}
+#stable .who small{display:block;font-weight:500;font-size:11px;color:var(--ink-faint)}
+#stable tr.sum td{border-bottom:none;border-top:1px solid rgba(159,213,200,.34);font-weight:900;color:#c7ece2}
+#stable td.tot{font-weight:900;color:var(--ink)}
+
+footer{margin-top:44px;text-align:center;color:var(--ink-faint);font-size:11.5px;line-height:2}
+footer a{color:var(--ink-dim)}
+.backlink{display:inline-block;margin-bottom:10px;font-size:12.5px;color:var(--ink-dim);
+  border:1px solid var(--line);background:rgba(255,255,255,.04);border-radius:999px;padding:6px 14px;text-decoration:none}
+
+@media (max-width:420px){ input.money{width:84px} }
+@media (prefers-reduced-motion:reduce){ #mist .band{animation:none} }
+</style>
+</head>
+<body>
+<div id="mist" aria-hidden="true"></div>
+
+<div class="wrap">
+
+  <header class="hero">
+    <span class="kicker">🌄 2027 FAMILY TRIP ─ PLANNING</span>
+    <h1>畑のおやど<span class="grad">・2泊3日</span></h1>
+    <p class="sub">2027年 ／ 兵庫県朝来市多々良木<br><span style="font-size:13px;color:var(--ink-faint)">計画・検討用のページ</span></p>
+
+    <div class="status">📝 計画中 <span>日程はこれから</span></div>
+
+    <div class="facts">
+      <span class="chip">👨‍👩‍👧‍👦 <b>10名</b>（大人7・小人2・幼児1）</span>
+      <span class="chip">🏠 <b>4世帯</b></span>
+      <span class="chip">🌙 <b>2泊3日</b></span>
+      <span class="chip">🆕 なみさん 合流</span>
+    </div>
+
+    <svg class="hills" viewBox="0 0 800 100" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,100 L80,52 L160,78 L250,34 L340,72 L430,46 L520,80 L610,40 L700,70 L800,50 L800,100 Z" fill="rgba(159,213,200,.07)"/>
+      <path d="M0,100 L70,72 L150,90 L240,60 L330,92 L420,66 L510,94 L600,64 L690,88 L800,72 L800,100 Z" fill="rgba(124,196,127,.10)"/>
+    </svg>
+  </header>
+
+  <nav>
+    <div class="navrow">
+      <a href="#overview">📋 概要</a>
+      <a href="#inns">🏡 宿の候補</a>
+      <a href="#todo">✅ 決めること</a>
+      <a href="#budget">💰 収支の試算</a>
+    </div>
+  </nav>
+
+  <!-- ============ 概要 ============ -->
+  <section id="overview">
+    <div class="sec-h"><h2>今回の前提</h2><span class="en">Overview</span></div>
+    <div class="grid2">
+      <div class="stat"><div class="k">日程</div><div class="v">未定<br><small>2027年のお盆は8/15が日曜。8/14(土)–16(月) か 8/15(日)–17(火) が本命</small></div></div>
+      <div class="stat"><div class="k">人数</div><div class="v">10名<br><small>大人7・小人2（12歳・10歳）・幼児1（3歳）</small></div></div>
+      <div class="stat"><div class="k">世帯</div><div class="v">4世帯<br><small>ゆう家族／ご両親／仁・なみ／陽</small></div></div>
+      <div class="stat"><div class="k">泊数</div><div class="v">2泊3日<br><small>昨年の「1泊では足りない」を受けて</small></div></div>
+    </div>
+
+    <div class="card" style="margin-top:12px">
+      <div style="font-weight:900;margin-bottom:6px">🎯 昨年からの変更点</div>
+      <div class="desc">
+        <b>人数が9名 → 10名</b>になります（仁さんの奥様・なみさんが合流）。大人が6→7名、世帯は4つのままですが、仁さんは<b>「仁・なみ」で1世帯</b>の扱いになります。<br>
+        <b>子どもは全員1つ上がります。</b>12歳・10歳・3歳。ここが料金に効いてくる可能性があるので、下の「決めること」を参照してください。<br>
+        そして<b>1泊 → 2泊</b>。宿泊費がほぼ倍になるので、総額の桁が変わります。早めに全員へ共有しておくべき数字です。
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 宿の候補 ============ -->
+  <section id="inns">
+    <div class="sec-h"><h2>宿の候補</h2><span class="en">Where</span></div>
+    <div class="inns">
+      <div class="inn main">
+        <span class="rank">★ 本命</span>
+        <h3>畑のおやど</h3>
+        <div class="meta">兵庫県朝来市多々良木1277 ／ 090-9055-8778 ／ 北垣敏明さん</div>
+        <p>
+          昨年お世話になった一日一組の一棟貸切。設備が完備で、食材だけ持ち込めば成立します。
+          帰った直後に「ロス」になるくらいだったので、今年もここが第一希望。<br>
+          <b style="color:var(--ink)">一日一組・リピーター多数</b>なので、日程が決まり次第すぐ押さえたいところです。
+        </p>
+      </div>
+      <div class="inn">
+        <span class="rank">代替</span>
+        <h3 class="pending">福知山の宿（名称未登録）</h3>
+        <div class="meta">京都府福知山市</div>
+        <p>
+          畑のおやどが埋まっていた場合の代替候補。<br>
+          <span class="pending">※ 宿名が分かり次第ここに追記します。</span>設備・料金・キャンセル規定を畑のおやどと並べて比較できるようにする予定です。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 決めること ============ -->
+  <section id="todo">
+    <div class="sec-h"><h2>決めること・確認すること</h2><span class="en">To Do</span></div>
+    <div class="card">
+      <ul class="todo">
+        <li><span class="no">1</span><div><b>日程を決める</b>
+          <span class="why">これが決まらないと宿を押さえられません。一日一組の宿なので、ここが最優先。</span></div></li>
+        <li><span class="no">2</span><div><b>12歳（中学生）の料金区分を宿に確認</b>
+          <span class="why">昨年は小人8,000円でしたが、中学生から大人料金になる宿は多いです。2泊なので差が4,000円出ます。</span></div></li>
+        <li><span class="no">3</span><div><b>3歳の布団の要否を確認</b>
+          <span class="why">昨年は「布団なし1,500円」でした。3歳だと布団が必要になり、料金区分が変わる可能性があります。</span></div></li>
+        <li><span class="no">4</span><div><b>2泊の料金と、連泊割引の有無を確認</b>
+          <span class="why">単純に2倍なのか、連泊で下がるのか。総額の前提が変わります。</span></div></li>
+        <li><span class="no">5</span><div><b>10名で泊まれるか確認</b>
+          <span class="why">昨年は9名。和室4室＋和洋室1室なので入るはずですが、布団の枚数は要確認です。</span></div></li>
+        <li><span class="no">6</span><div><b>車の台数を決める</b>
+          <span class="why">10名だと5人乗り2台では乗り切れません。3台にするか、ミニバンを手配するか。</span></div></li>
+        <li><span class="no">7</span><div><b>福知山の宿の名前を登録する</b>
+          <span class="why">押さえられなかった時にすぐ動けるよう、先に調べておきます。</span></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ 収支 ============ -->
+  <section id="budget">
+    <div class="sec-h"><h2>収支の試算</h2><span class="en">Budget</span></div>
+    <div class="card">
+      <div style="font-size:12.5px;color:var(--ink-dim);margin-bottom:12px">
+        <b style="color:var(--amber)">すべて仮の数字です。</b>昨年の実績をもとに、2泊3日・10名で置いています。金額欄は書き換えられます（合計は自動再計算、この端末に保存）。<br>
+        <span class="tbd">要確認</span> が付いている項目は、宿に聞かないと確定しないものです。
+      </div>
+
+      <table id="btable">
+        <thead><tr><th>項目</th><th class="num">金額</th></tr></thead>
+        <tbody>
+          <tr class="grp"><td colspan="2">■ 宿泊（2泊分・現地現金払い）</td></tr>
+          <tr><td>宿泊費 大人7名 × 10,000円 × 2泊<span class="note">昨年の単価で試算</span></td><td class="num"><input class="money" data-cash="1" data-alloc="adult" value="140000"></td></tr>
+          <tr><td>宿泊費 小人2名 × 8,000円 × 2泊<span class="tbd">要確認</span><span class="note">12歳が大人料金になると +4,000円</span></td><td class="num"><input class="money" data-cash="1" data-alloc="kid" value="32000"></td></tr>
+          <tr><td>宿泊費 幼児1名 × 1,500円 × 2泊<span class="tbd">要確認</span><span class="note">3歳で布団が必要だと区分が変わります</span></td><td class="num"><input class="money" data-cash="1" data-alloc="tot" value="3000"></td></tr>
+          <tr><td>朝食オプション 1,000円 × 9名 × 2回<span class="note">大人7＋小人2。2泊なので朝食は2回</span></td><td class="num"><input class="money" data-cash="1" data-alloc="adultkid" value="18000"></td></tr>
+          <tr><td>生ビールサーバーなど宿のオプション<span class="note">昨年は8,300円（ポップコーン込み）。2泊なので多めに</span></td><td class="num"><input class="money" data-cash="1" value="12000"></td></tr>
+
+          <tr class="grp"><td colspan="2">■ 交通<span class="tbd">台数 要決定</span></td></tr>
+          <tr><td>高速代 往復 約4,040円 × 3台<span class="note">10名だと3台の想定。ミニバン2台なら2台分に</span></td><td class="num"><input class="money" value="12120"></td></tr>
+          <tr><td>ガソリン（自家用車分）<span class="note">往復＋現地移動で1台あたり約240〜300km</span></td><td class="num"><input class="money" value="7000"></td></tr>
+          <tr><td>レンタカー／カーシェア<span class="note">2泊3日は60時間前後。昨年の36時間13,200円から換算</span></td><td class="num"><input class="money" value="22000"></td></tr>
+
+          <tr class="grp"><td colspan="2">■ 食材（夕食2回）</td></tr>
+          <tr><td>1日目 BBQの肉<span class="note">昨年はハラミ1kg＋中落ちカルビ1kg＝13,700円。10名なので増量</span></td><td class="num"><input class="money" value="16000"></td></tr>
+          <tr><td>2日目 夕食の食材<span class="note">囲炉裏・鉄器鍋を使う想定。BBQ2連続は飽きます</span></td><td class="num"><input class="money" value="12000"></td></tr>
+
+          <tr class="grp"><td colspan="2">■ 遊び・立ち寄り</td></tr>
+          <tr><td>温泉（よふど温泉など）× 2回<span class="note">大人800／3歳以上400。2泊なので2回想定</span></td><td class="num"><input class="money" value="13000"></td></tr>
+          <tr><td>入場料・施設利用<span class="note">美術館ほか。2泊だと行き先が1つ増やせます</span></td><td class="num"><input class="money" value="6000"></td></tr>
+
+          <tr class="grp"><td colspan="2" style="color:var(--ink-faint);font-weight:600">※ 昼食・お土産・飲み物・おやつは、昨年と同じく各自精算のため含みません</td></tr>
+        </tbody>
+      </table>
+
+      <div class="total">
+        <div><div class="lab">総額の目安（仮）</div><div class="big" id="grand">¥0</div></div>
+        <div class="per">1人あたり（9名・幼児除く）<br><b id="per" style="font-size:16px;color:var(--ink)">¥0</b></div>
+      </div>
+
+      <div class="split">
+        <div class="split-h">🧾 世帯ごとの目安</div>
+        <div class="split-note">
+          <b>宿泊費と朝食は各自の実額</b>。それ以外の共通費は、<b>幼児は対象外</b>、<b>小学生は0.5人分</b>として数え、<b>合計8人分</b>で割っています（昨年と同じルール）。
+        </div>
+        <table id="stable">
+          <thead><tr><th>世帯</th><th class="num">宿泊まわり</th><th class="num">共通費</th><th class="num">目安</th></tr></thead>
+          <tbody id="sbody"></tbody>
+        </table>
+      </div>
+
+      <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap">
+        <button class="btn" id="reset">↺ 初期値に戻す</button>
+        <span style="font-size:11.5px;color:var(--ink-faint);align-self:center">※編集内容はこの端末にだけ保存されます</span>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <a class="backlink" href="https://rin620317-cyber.github.io/asago-trip-2026/" target="_blank" rel="noopener">📗 2026年版の収支（実績）を見る</a>
+    <div>🌄 2027 家族旅行 計画ページ</div>
+    <div style="margin-top:4px">金額はすべて仮置きです。決まったものから順に差し替えていきます。</div>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* 朝霧 */
+  var m = document.getElementById('mist');
+  if (m){
+    for (var i=0;i<4;i++){
+      var b = document.createElement('div');
+      b.className = 'band';
+      b.style.top = (12 + i*22) + 'vh';
+      b.style.animationDuration = (34 + i*9) + 's';
+      b.style.animationDelay = (-i*7) + 's';
+      b.style.opacity = (0.75 - i*0.13).toFixed(2);
+      m.appendChild(b);
+    }
+  }
+
+  /* 世帯。大人=a / 小人=k / 幼児=t */
+  var HOUSE = [
+    { name:'ゆう家族', sub:'私・妻・子ども3人', a:2, k:2, t:1 },
+    { name:'ご両親',   sub:'父・母',            a:2, k:0, t:0 },
+    { name:'仁・なみ', sub:'ご夫婦',            a:2, k:0, t:0 },
+    { name:'陽',       sub:'1名',               a:1, k:0, t:0 }
+  ];
+  var HEAD = { adult:0, kid:0, tot:0 };
+  HOUSE.forEach(function(h){ HEAD.adult += h.a; HEAD.kid += h.k; HEAD.tot += h.t; });
+  HEAD.adultkid = HEAD.adult + HEAD.kid;
+  HEAD.weight   = HEAD.adult + HEAD.kid * 0.5;   // 共通費は小学生を0.5人分
+
+  var inputs   = Array.prototype.slice.call(document.querySelectorAll('input.money'));
+  var defaults = inputs.map(function(i){ return i.value; });
+  var SIG = defaults.join('|') + '#' + inputs.map(function(i){
+    var td = i.closest('td'); var tr = td && td.parentNode;
+    return tr ? (tr.cells[0].textContent || '').replace(/\s+/g,'').slice(0,24) : '';
+  }).join('|');
+  var KEY = 'asago2027.budget.v1';
+  var yen = function(n){ return '¥' + Math.round(n).toLocaleString('ja-JP'); };
+
+  function renderSplit(pools){
+    var body = document.getElementById('sbody');
+    if (!body) return;
+    var per = function(pool, head){ return head > 0 ? pool / head : 0; };
+    var rows = '', sS = 0, sC = 0;
+    HOUSE.forEach(function(h){
+      var stay = per(pools.adult, HEAD.adult) * h.a
+               + per(pools.kid,   HEAD.kid)   * h.k
+               + per(pools.tot,   HEAD.tot)   * h.t
+               + per(pools.adultkid, HEAD.adultkid) * (h.a + h.k);
+      var com  = per(pools.common, HEAD.weight) * (h.a + h.k * 0.5);
+      sS += stay; sC += com;
+      var wp = [];
+      if (h.a) wp.push('大人' + h.a);
+      if (h.k) wp.push('小学生' + h.k + '×0.5');
+      var wlab = wp.join('＋') + ' ＝ ' + (h.a + h.k * 0.5) + '人分' + (h.t ? '（幼児は対象外）' : '');
+      rows += '<tr><td class="who">' + h.name
+            + '<small>' + h.sub + '／' + (h.a + h.k + h.t) + '名</small>'
+            + '<small style="color:#9fd5c8">共通費は ' + wlab + '</small></td>'
+            + '<td class="num">' + yen(stay) + '</td>'
+            + '<td class="num">' + yen(com) + '</td>'
+            + '<td class="num tot">' + yen(stay + com) + '</td></tr>';
+    });
+    rows += '<tr class="sum"><td>合計</td><td class="num">' + yen(sS) + '</td>'
+          + '<td class="num">' + yen(sC) + '</td><td class="num">' + yen(sS + sC) + '</td></tr>';
+    body.innerHTML = rows;
+  }
+
+  function recalc(){
+    var total = 0;
+    var pools = { adult:0, kid:0, tot:0, adultkid:0, common:0 };
+    inputs.forEach(function(i){
+      var v = parseInt(String(i.value).replace(/[^0-9-]/g,''),10);
+      if (isNaN(v)) v = 0;
+      total += v;
+      var a = i.dataset.alloc;
+      if (a && pools.hasOwnProperty(a)) { pools[a] += v; } else { pools.common += v; }
+    });
+    renderSplit(pools);
+    document.getElementById('grand').textContent = yen(total);
+    document.getElementById('per').textContent   = yen(total / HEAD.adultkid);
+    try { localStorage.setItem(KEY, JSON.stringify({ sig: SIG, values: inputs.map(function(i){return i.value;}) })); } catch(e){}
+  }
+
+  try {
+    var saved = JSON.parse(localStorage.getItem(KEY) || 'null');
+    if (saved && saved.sig === SIG && Array.isArray(saved.values) && saved.values.length === inputs.length){
+      inputs.forEach(function(i,idx){ i.value = saved.values[idx]; });
+    } else if (saved) { localStorage.removeItem(KEY); }
+  } catch(e){}
+
+  inputs.forEach(function(i){
+    i.setAttribute('inputmode','numeric');
+    i.addEventListener('input', recalc);
+    i.addEventListener('focus', function(){ i.select(); });
+  });
+  document.getElementById('reset').addEventListener('click', function(){
+    inputs.forEach(function(i,idx){ i.value = defaults[idx]; });
+    recalc();
+  });
+  recalc();
+})();
+</script>
+</body>
+</html>
