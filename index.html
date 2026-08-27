@@ -126,6 +126,12 @@ input.money:focus{outline:2px solid rgba(232,176,75,.5);outline-offset:1px}
 .note{font-size:11.5px;color:var(--ink-faint);display:block;margin-top:2px}
 .tbd{display:inline-block;font-size:10px;font-weight:800;letter-spacing:.04em;color:var(--amber);
   border:1px solid rgba(232,176,75,.35);background:rgba(232,176,75,.10);padding:1px 7px;border-radius:6px;margin-left:6px;vertical-align:middle}
+.scen{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap}
+.scen-b{flex:1 1 auto;font-size:13px;font-weight:800;font-family:inherit;cursor:pointer;
+  color:var(--ink-dim);background:rgba(255,255,255,.05);border:1px solid var(--line);
+  border-radius:12px;padding:10px 14px;transition:.15s}
+.scen-b.active{color:#0f1b14;background:linear-gradient(100deg,#a5dfa8,var(--moss));border-color:transparent}
+.scen-b small{display:block;font-weight:600;font-size:11px;opacity:.75;margin-top:1px}
 .total{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:14px;padding:14px 16px;border-radius:16px;
   background:linear-gradient(100deg,rgba(232,176,75,.15),rgba(224,138,95,.10));border:1px solid rgba(232,176,75,.32)}
 .total .lab{font-size:12px;color:var(--ink-dim);letter-spacing:.06em}
@@ -310,7 +316,12 @@ footer a{color:var(--ink-dim)}
         <span class="tbd">要確認</span> が付いている項目は、宿に聞かないと確定しないものです。
       </div>
 
-      <table id="btable">
+      <div class="scen">
+        <button class="scen-b active" data-s="hata">🏡 畑のおやど<small>本命・朝来市</small></button>
+        <button class="scen-b" data-s="three">🏠 3ぴーす<small>代替・福知山市</small></button>
+      </div>
+
+      <table class="btable" data-s="hata">
         <thead><tr><th>項目</th><th class="num">金額</th></tr></thead>
         <tbody>
           <tr class="grp"><td colspan="2">■ 宿泊（2泊分・現地現金払い）</td></tr>
@@ -337,6 +348,35 @@ footer a{color:var(--ink-dim)}
         </tbody>
       </table>
 
+      <table class="btable" data-s="three" hidden>
+        <thead><tr><th>項目</th><th class="num">金額</th></tr></thead>
+        <tbody>
+          <tr class="grp"><td colspan="2">■ 宿泊（2泊分・10名）</td></tr>
+          <tr><td>基本料金 4名まで 33,000円 × 2泊</td><td class="num"><input class="money" data-alloc="lodge" value="66000"></td></tr>
+          <tr><td>追加 大人3名 × 6,600円 × 2泊<span class="note">5人目以降が加算されます</span></td><td class="num"><input class="money" data-alloc="lodge" value="39600"></td></tr>
+          <tr><td>追加 子ども3名 × 3,300円 × 2泊<span class="note">3〜12歳。3歳の次男もこの区分に入ります</span></td><td class="num"><input class="money" data-alloc="lodge" value="19800"></td></tr>
+          <tr><td>お盆加算 25,000円 × 2泊<span class="tbd">要確認</span><span class="note">1泊あたりか滞在あたりか、問い合わせて確定を</span></td><td class="num"><input class="money" data-alloc="lodge" value="50000"></td></tr>
+          <tr><td>連泊割引<span class="note">2泊目以降10,000円引き</span></td><td class="num"><input class="money" data-alloc="lodge" value="-10000"></td></tr>
+
+          <tr class="grp"><td colspan="2">■ 交通<span class="tbd">台数 要決定</span></td></tr>
+          <tr><td>高速代<span class="note">国道176号で一本（宝塚→三田→篠山→福知山）。約90km・2時間半〜3時間。<b style="color:var(--moss)">下道で行くため0円</b></span></td><td class="num"><input class="money" value="0"></td></tr>
+          <tr><td>ガソリン（自家用車分）<span class="note">下道は燃費が落ちるぶん多めに</span></td><td class="num"><input class="money" value="8000"></td></tr>
+          <tr><td>レンタカー／カーシェア<span class="note">2泊3日は60時間前後</span></td><td class="num"><input class="money" value="22000"></td></tr>
+
+          <tr class="grp"><td colspan="2">■ 食材（夕食2回＋朝食2回）</td></tr>
+          <tr><td>1日目 BBQの肉</td><td class="num"><input class="money" value="16000"></td></tr>
+          <tr><td>2日目 夕食の食材</td><td class="num"><input class="money" value="12000"></td></tr>
+          <tr><td>朝食の食材 × 2回<span class="note">3ぴーすは食事の提供がないので自炊</span></td><td class="num"><input class="money" value="8000"></td></tr>
+
+          <tr class="grp"><td colspan="2">■ 遊び・立ち寄り</td></tr>
+          <tr><td>BBQセット（有料）× 1回<span class="note">2泊のうち1日だけBBQ。畑のおやどは無料でした</span></td><td class="num"><input class="money" value="5000"></td></tr>
+          <tr><td>温泉 × 2回</td><td class="num"><input class="money" value="13000"></td></tr>
+          <tr><td>入場料・施設利用<span class="note">福知山城・大江山・天橋立方面など</span></td><td class="num"><input class="money" value="6000"></td></tr>
+
+          <tr class="grp"><td colspan="2" style="color:var(--ink-faint);font-weight:600">※ 昼食・お土産・飲み物・おやつは各自精算のため含みません</td></tr>
+        </tbody>
+      </table>
+
       <div class="total">
         <div><div class="lab">総額の目安（仮）</div><div class="big" id="grand">¥0</div></div>
         <div class="per">1人あたり（9名・幼児除く）<br><b id="per" style="font-size:16px;color:var(--ink)">¥0</b></div>
@@ -345,7 +385,9 @@ footer a{color:var(--ink-dim)}
       <div class="split">
         <div class="split-h">🧾 世帯ごとの目安</div>
         <div class="split-note">
-          <b>宿泊費と朝食は各自の実額</b>。それ以外の共通費は、<b>幼児は対象外</b>、<b>小学生は0.5人分</b>として数え、<b>合計8人分</b>で割っています（昨年と同じルール）。
+          <b>宿泊費と朝食は各自の実額</b>。それ以外の共通費は、<b>幼児は対象外</b>、<b>小学生は0.5人分</b>として数え、<b>合計8人分</b>で割っています（昨年と同じルール）。<br>
+          <b>3ぴーす案の宿泊費だけは別扱い</b>です。4名一括＋追加人数という料金体系で人数比例にならないため、
+          宿の料金表の比率（<b>大人2：子ども1</b>、3歳も子ども区分）で全員に配分しています。
         </div>
         <table id="stable">
           <thead><tr><th>世帯</th><th class="num">宿泊まわり</th><th class="num">共通費</th><th class="num">目安</th></tr></thead>
@@ -396,14 +438,21 @@ footer a{color:var(--ink-dim)}
   HOUSE.forEach(function(h){ HEAD.adult += h.a; HEAD.kid += h.k; HEAD.tot += h.t; });
   HEAD.adultkid = HEAD.adult + HEAD.kid;
   HEAD.weight   = HEAD.adult + HEAD.kid * 0.5;   // 共通費は小学生を0.5人分
+  HEAD.lodge    = HEAD.adult * 2 + HEAD.kid + HEAD.tot;  // 3ぴーすの料金表比（大人2：子ども1）
 
-  var inputs   = Array.prototype.slice.call(document.querySelectorAll('input.money'));
-  var defaults = inputs.map(function(i){ return i.value; });
-  var SIG = defaults.join('|') + '#' + inputs.map(function(i){
-    var td = i.closest('td'); var tr = td && td.parentNode;
-    return tr ? (tr.cells[0].textContent || '').replace(/\s+/g,'').slice(0,24) : '';
-  }).join('|');
-  var KEY = 'asago2027.budget.v1';
+  /* 宿ごとに表を切り替える。計算はいま表示している表だけを見る。 */
+  var scen = 'hata', inputs = [], defaults = [], SIG = '', KEY = '';
+  function collect(){
+    var tbl = document.querySelector('.btable[data-s="' + scen + '"]');
+    inputs   = Array.prototype.slice.call(tbl.querySelectorAll('input.money'));
+    defaults = inputs.map(function(i){ return i.dataset.def || i.value; });
+    inputs.forEach(function(i,idx){ if (!i.dataset.def) i.dataset.def = defaults[idx]; });
+    SIG = defaults.join('|') + '#' + inputs.map(function(i){
+      var td = i.closest('td'); var tr = td && td.parentNode;
+      return tr ? (tr.cells[0].textContent || '').replace(/\s+/g,'').slice(0,24) : '';
+    }).join('|');
+    KEY = 'asago2027.budget.' + scen + '.v1';
+  }
   var yen = function(n){ return '¥' + Math.round(n).toLocaleString('ja-JP'); };
 
   function renderSplit(pools){
@@ -415,7 +464,8 @@ footer a{color:var(--ink-dim)}
       var stay = per(pools.adult, HEAD.adult) * h.a
                + per(pools.kid,   HEAD.kid)   * h.k
                + per(pools.tot,   HEAD.tot)   * h.t
-               + per(pools.adultkid, HEAD.adultkid) * (h.a + h.k);
+               + per(pools.adultkid, HEAD.adultkid) * (h.a + h.k)
+               + per(pools.lodge, HEAD.lodge) * (h.a * 2 + h.k + h.t);
       var com  = per(pools.common, HEAD.weight) * (h.a + h.k * 0.5);
       sS += stay; sC += com;
       var wp = [];
@@ -436,7 +486,7 @@ footer a{color:var(--ink-dim)}
 
   function recalc(){
     var total = 0;
-    var pools = { adult:0, kid:0, tot:0, adultkid:0, common:0 };
+    var pools = { adult:0, kid:0, tot:0, adultkid:0, lodge:0, common:0 };
     inputs.forEach(function(i){
       var v = parseInt(String(i.value).replace(/[^0-9-]/g,''),10);
       if (isNaN(v)) v = 0;
@@ -450,23 +500,39 @@ footer a{color:var(--ink-dim)}
     try { localStorage.setItem(KEY, JSON.stringify({ sig: SIG, values: inputs.map(function(i){return i.value;}) })); } catch(e){}
   }
 
-  try {
-    var saved = JSON.parse(localStorage.getItem(KEY) || 'null');
-    if (saved && saved.sig === SIG && Array.isArray(saved.values) && saved.values.length === inputs.length){
-      inputs.forEach(function(i,idx){ i.value = saved.values[idx]; });
-    } else if (saved) { localStorage.removeItem(KEY); }
-  } catch(e){}
+  function activate(next){
+    scen = next;
+    Array.prototype.slice.call(document.querySelectorAll('.btable')).forEach(function(t){
+      t.hidden = (t.dataset.s !== scen);
+    });
+    Array.prototype.slice.call(document.querySelectorAll('.scen-b')).forEach(function(b){
+      b.classList.toggle('active', b.dataset.s === scen);
+    });
+    collect();
+    try {
+      var saved = JSON.parse(localStorage.getItem(KEY) || 'null');
+      if (saved && saved.sig === SIG && Array.isArray(saved.values) && saved.values.length === inputs.length){
+        inputs.forEach(function(i,idx){ i.value = saved.values[idx]; });
+      } else if (saved) { localStorage.removeItem(KEY); }
+    } catch(e){}
+    inputs.forEach(function(i){
+      if (i.dataset.bound) return;
+      i.dataset.bound = '1';
+      i.setAttribute('inputmode','numeric');
+      i.addEventListener('input', recalc);
+      i.addEventListener('focus', function(){ i.select(); });
+    });
+    recalc();
+  }
 
-  inputs.forEach(function(i){
-    i.setAttribute('inputmode','numeric');
-    i.addEventListener('input', recalc);
-    i.addEventListener('focus', function(){ i.select(); });
+  Array.prototype.slice.call(document.querySelectorAll('.scen-b')).forEach(function(b){
+    b.addEventListener('click', function(){ activate(b.dataset.s); });
   });
   document.getElementById('reset').addEventListener('click', function(){
     inputs.forEach(function(i,idx){ i.value = defaults[idx]; });
     recalc();
   });
-  recalc();
+  activate('hata');
 })();
 </script>
 </body>
