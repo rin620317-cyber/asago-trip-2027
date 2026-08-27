@@ -169,7 +169,7 @@ footer a{color:var(--ink-dim)}
 
     <div class="facts">
       <span class="chip">👨‍👩‍👧‍👦 <b>10名</b>（大人7・小人2・幼児1）</span>
-      <span class="chip">🏠 <b>4世帯</b></span>
+      <span class="chip">🏠 <b>3世帯</b></span>
       <span class="chip">🌙 <b>2泊3日</b></span>
       <span class="chip">🆕 なみさん 合流</span>
     </div>
@@ -195,14 +195,14 @@ footer a{color:var(--ink-dim)}
     <div class="grid2">
       <div class="stat"><div class="k">日程</div><div class="v">未定<br><small>2027年のお盆は8/15が日曜。8/14(土)–16(月) か 8/15(日)–17(火) が本命</small></div></div>
       <div class="stat"><div class="k">人数</div><div class="v">10名<br><small>大人7・小人2（12歳・10歳）・幼児1（3歳）</small></div></div>
-      <div class="stat"><div class="k">世帯</div><div class="v">4世帯<br><small>ゆう家族／ご両親／仁・なみ／陽</small></div></div>
+      <div class="stat"><div class="k">世帯</div><div class="v">3世帯<br><small>ゆう家族／ご両親・陽（同居）／仁・なみ</small></div></div>
       <div class="stat"><div class="k">泊数</div><div class="v">2泊3日<br><small>昨年の「1泊では足りない」を受けて</small></div></div>
     </div>
 
     <div class="card" style="margin-top:12px">
       <div style="font-weight:900;margin-bottom:6px">🎯 昨年からの変更点</div>
       <div class="desc">
-        <b>人数が9名 → 10名</b>になります（仁さんの奥様・なみさんが合流）。大人が6→7名、世帯は4つのままですが、仁さんは<b>「仁・なみ」で1世帯</b>の扱いになります。<br>
+        <b>人数が9名 → 10名</b>になります（仁さんの奥様・なみさんが合流）。大人が6→7名。精算の単位は<b>3世帯</b>で、ご両親と陽さんは同居なので1世帯、仁さんは<b>「仁・なみ」で1世帯</b>になります。<br>
         <b>子どもは全員1つ上がります。</b>12歳・10歳・3歳。ここが料金に効いてくる可能性があるので、下の「決めること」を参照してください。<br>
         そして<b>1泊 → 2泊</b>。宿泊費がほぼ倍になるので、総額の桁が変わります。早めに全員へ共有しておくべき数字です。
       </div>
@@ -345,10 +345,9 @@ footer a{color:var(--ink-dim)}
 
   /* 世帯。大人=a / 小人=k / 幼児=t */
   var HOUSE = [
-    { name:'ゆう家族', sub:'私・妻・子ども3人', a:2, k:2, t:1 },
-    { name:'ご両親',   sub:'父・母',            a:2, k:0, t:0 },
-    { name:'仁・なみ', sub:'ご夫婦',            a:2, k:0, t:0 },
-    { name:'陽',       sub:'1名',               a:1, k:0, t:0 }
+    { name:'ゆう家族',   sub:'私・妻・子ども3人', a:2, k:2, t:1 },
+    { name:'ご両親・陽', sub:'父・母・陽（同居）', a:3, k:0, t:0 },
+    { name:'仁・なみ',   sub:'ご夫婦',            a:2, k:0, t:0 }
   ];
   var HEAD = { adult:0, kid:0, tot:0 };
   HOUSE.forEach(function(h){ HEAD.adult += h.a; HEAD.kid += h.k; HEAD.tot += h.t; });
