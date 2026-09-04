@@ -108,6 +108,9 @@ table.tt thead th.hA{background:#7d9bd8}
 table.tt thead th.hB{background:var(--berry)}
 td.join{background:linear-gradient(100deg,#fdf0e6,#fbe6d6)}
 td.fw{background:linear-gradient(100deg,#f3ecfb,#e9defa)}
+td.fin{background:#eef7f0}
+td.none{background:repeating-linear-gradient(45deg,#f7f7f2,#f7f7f2 6px,#efefe8 6px,#efefe8 12px);opacity:.5}
+td.time{line-height:1.35}
 table.tt thead th small{display:block;font-weight:600;font-size:10.5px;opacity:.92}
 td.time{position:sticky;left:0;z-index:2;background:#f4f1e6;font-weight:900;color:var(--ink-dim);
   font-size:11px;text-align:center;white-space:nowrap;width:60px}
@@ -284,65 +287,59 @@ footer{margin-top:48px;text-align:center;color:var(--ink-faint);font-size:11.5px
           </thead>
           <tbody>
             <tr>
-              <td class="time">7:00<br>8:00</td>
-              <td class="move"><span class="ev">🚗 出発</span><span class="sm">伊丹発。渋滞前に出る</span></td>
-              <td class="join" colspan="2"><span class="ev">🍜 流しそうめん</span><span class="sm">この日の朝ごはん。流し台は宿の備品（無料）</span></td>
-              <td class="meal"><span class="ev">🍳 宿の朝ごはん</span><span class="sm">朝食を頼むのはこの日だけ</span></td>
+              <td class="time">7:00<br>│<br>9:00</td>
+              <td class="move"><span class="ev">🚗 7:00 出発</span><span class="sm">伊丹発。渋滞前に出る</span></td>
+              <td class="join" colspan="2"><span class="ev">🍜 8:00 流しそうめん</span><span class="sm">この日の朝ごはん。流し台は宿の備品（無料）</span></td>
+              <td class="meal"><span class="ev">🍳 8:00 宿の朝ごはん</span><span class="sm">朝食を頼むのはこの日だけ</span></td>
             </tr>
             <tr>
-              <td class="time">9:00<br>11:30</td>
-              <td class="move"><span class="ev">🛣️ 移動</span><span class="sm">播但道。SAで休憩</span></td>
-              <td class="join" colspan="2"><span class="ev">🏞️ 川あそび ─ 全員</span><span class="sm">宿の隣。<b>朝のうちに済ませる</b>ので日差しがまだ弱い</span></td>
-              <td><span class="ev">🧳 荷造り</span><span class="sm">車に積んでおく</span></td>
+              <td class="time">9:00<br>│<br>11:00</td>
+              <td class="move"><span class="ev">🛣️ 移動</span><span class="sm">播但道。SAで休憩<br>10:00頃 ひめはな公園に到着</span></td>
+              <td class="join" colspan="2"><span class="ev">🏞️ 9:30 川あそび ─ 全員</span><span class="sm">宿の隣。<b>朝のうちに済ませる</b>ので日差しがまだ弱い</span></td>
+              <td><span class="ev">🧳 9:00 荷造り</span><span class="sm">車に積む<br>10:00 美術館（徒歩300m）</span></td>
             </tr>
             <tr>
-              <td class="time">11:30<br>13:00</td>
-              <td class="big"><span class="ev">🛝 公園など</span><span class="sm">ひめはな公園ほか</span></td>
-              <td class="join" colspan="2"><span class="ev">🚿 着替え・お昼</span><span class="sm">濡れ物は乾燥機へ。ここでA・Bに分かれる</span></td>
-              <td><span class="ev">🗿 近場をひとつ</span><span class="sm">美術館は宿から徒歩300m</span></td>
+              <td class="time">11:00<br>│<br>13:00</td>
+              <td class="big"><span class="ev">🛝 公園 → 🥐 お昼</span><span class="sm">ひめはな公園であそんで、12:00頃 <b>やきたてパン工房 苺一笑</b>へ<br>山東町大月1023-1・公園と同じ山東町。国産小麦のパン</span></td>
+              <td class="join" colspan="2"><span class="ev">🚿 11:30 着替え・お昼</span><span class="sm">濡れ物は乾燥機へ。<b>ここでA・Bに分かれる</b></span></td>
+              <td class="meal"><span class="ev">👋 11:00 チェックアウト</span><span class="sm">忘れ物チェック<br>12:00 お昼</span></td>
             </tr>
             <tr>
-              <td class="time">13:00<br>14:30</td>
-              <td class="meal"><span class="ev">🍙 お昼</span><span class="sm">道の駅など</span></td>
+              <td class="time">13:00<br>│<br>14:30</td>
+              <td><span class="ev">🛒 立ち寄り・買い出し</span><span class="sm">やまよし（わさビーフ）など</span></td>
               <td class="gA"><span class="ev">ネトフリ・昼寝</span><span class="sm">プロジェクターで映画。縁側でハンモック</span></td>
               <td class="gB"><span class="ev">おでかけ</span><span class="sm">散策・道の駅めぐり</span></td>
-              <td><span class="ev">👋 11:00 チェックアウト</span><span class="sm">忘れ物チェック</span></td>
+              <td class="move"><span class="ev">🚗 13:00 帰路</span><span class="sm">下道／高速で伊丹へ</span></td>
             </tr>
             <tr>
-              <td class="time">14:30<br>16:00</td>
+              <td class="time">14:30<br>│<br>16:00</td>
               <td class="big"><span class="ev">♨️ よふど温泉</span><span class="sm"><b>チェックイン前にひと風呂</b>。移動の汗を落としてから宿へ</span></td>
               <td class="gA"><span class="ev">🛁 宿のお風呂</span><span class="sm"><b>運転なし。動かない日</b><br>3歳の昼寝もここで</span></td>
               <td class="gB"><span class="ev">♨️ 銭湯・買い出し</span><span class="sm">よふど温泉など<br><b>BBQの食材はB組が調達</b></span></td>
-              <td class="meal"><span class="ev">🍽️ お昼</span><span class="sm">帰り道で</span></td>
+              <td class="fin"><span class="ev">🏠 15〜16時 帰宅</span><span class="sm">おつかれさまでした</span></td>
             </tr>
             <tr>
-              <td class="time">16:00</td>
-              <td><span class="ev">🏡 チェックイン</span><span class="sm">16:00〜。荷ほどき</span></td>
-              <td class="join" colspan="2"><span class="ev">🔥 BBQ 開始 ─ 全員合流</span><span class="sm">明るいうちから。火起こしは子どもの担当</span></td>
-              <td class="move"><span class="ev">🚗 帰路</span><span class="sm">15〜16時に帰宅</span></td>
+              <td class="time">16:00<br>│<br>18:00</td>
+              <td><span class="ev">🏡 16:00 チェックイン</span><span class="sm">荷ほどき<br>16:30 🍅 野菜の収穫体験</span></td>
+              <td class="join" colspan="2"><span class="ev">🔥 16:00 BBQ 開始 ─ 全員合流</span><span class="sm">明るいうちから。火起こしは子どもの担当</span></td>
+              <td class="none"></td>
             </tr>
             <tr>
-              <td class="time">16:30<br>18:00</td>
-              <td class="big"><span class="ev">🍅 野菜の収穫体験</span><span class="sm">今年の主役。カメラを構える</span></td>
-              <td class="join" colspan="2"><span class="sm">火を囲みながら、ゆっくり焼いていく</span></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class="time">18:00<br>20:00</td>
+              <td class="time">18:00<br>│<br>20:00</td>
               <td class="meal"><span class="ev">🍛 カレー</span><span class="sm">大鍋で多めに作る。<b>余りは翌日のBBQで子どもが食べる</b></span></td>
               <td class="meal" colspan="2"><span class="ev">🍖 BBQ つづき</span><span class="sm">前日のカレーもここで登場</span></td>
-              <td></td>
+              <td class="none"></td>
             </tr>
             <tr>
-              <td class="time">20:00<br>21:30</td>
+              <td class="time">20:00<br>│<br>21:30</td>
               <td><span class="ev">🔭 星空・焚き火</span><span class="sm">天体望遠鏡あり</span></td>
               <td class="fw" colspan="2"><span class="ev">🎆 手持ち花火</span><span class="sm">そのあと焚き火。雨ならプロジェクターで映画</span></td>
-              <td></td>
+              <td class="none"></td>
             </tr>
           </tbody>
         </table>
       </div>
-      <div class="ttnote">※ 横にスクロールできます。2日目は<b>午前が全員いっしょ</b>（流しそうめん→川あそび）、<b>午後だけ</b><b style="color:#7d9bd8">A組</b>と<b style="color:#e2685f">B組</b>に分かれ、<b>16時のBBQで合流</b>します。</div>
+      <div class="ttnote">※ 横にスクロールできます。<b>同じ行は同じ時間帯</b>です（3日目は昼過ぎに終わるので、夕方以降は斜線）。2日目は<b>午前が全員いっしょ</b>（流しそうめん→川あそび）、<b>午後だけ</b><b style="color:#7d9bd8">A組</b>と<b style="color:#e2685f">B組</b>に分かれ、<b>16時のBBQで合流</b>します。</div>
     </div>
   </section>
 
@@ -567,9 +564,11 @@ footer{margin-top:48px;text-align:center;color:var(--ink-faint);font-size:11.5px
           <span class="why">単純に2倍か、連泊で下がるか。総額の前提が変わります。</span></div></li>
         <li><span class="no">6</span><div><b>10名で泊まれるか・布団の枚数を確認</b>
           <span class="why">昨年は9名。和室4室＋和洋室1室なので入るはずですが要確認。</span></div></li>
-        <li><span class="no">7</span><div><b>車の台数を決める</b>
+        <li><span class="no">7</span><div><b>苺一笑（パン屋）の営業日と駐車場を確認</b>
+          <span class="why">やきたてパン工房 苺一笑（朝来市山東町大月1023-1／079-668-9488）は<b>10:00〜18:00・木曜定休、月1回だけ日曜も不定休</b>。日曜出発ならここが読めません。<b>駐車場は5台ぶん</b>なので、3台で行くと占有してしまいます。混む時間を外すか、代表が買いに行って公園で食べる手も。</span></div></li>
+        <li><span class="no">8</span><div><b>車の台数を決める</b>
           <span class="why">10名だと5人乗り2台では乗り切れません。3台にするか、ミニバンにするか。</span></div></li>
-        <li><span class="no">8</span><div><b>2日目のA組・B組の割り振り</b>
+        <li><span class="no">9</span><div><b>2日目のA組・B組の割り振り</b>
           <span class="why">前日の夜に決める。<b>B組が5人以内なら車1台で済み、お父様は運転せずにすみます</b>。ここが今年の設計の肝です。</span></div></li>
       </ul>
     </div>
