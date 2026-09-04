@@ -255,7 +255,7 @@ footer a{color:var(--ink-dim)}
       </table>
       <div class="desc" style="margin-top:12px">
         <b>3ぴーすのほうが約22,600円 安い試算</b>です。ただし朝食が付かないので、2回ぶんの朝食を自分たちで用意する必要があります。実質の差はもう少し縮みます。<br><br>
-        3ぴーすの料金は「<b>4名まで一律33,000円＋5人目から大人6,600円／子ども(3〜12歳)3,300円</b>」という積み上げ式で、これに<b>お盆加算25,000円</b>が乗り、<b>2泊目は10,000円引き</b>という計算です。<span class="tbd">要確認</span> 加算が1泊あたりか滞在あたりかは、問い合わせて確定させる必要があります。
+        3ぴーすの料金は「<b>4名まで一律33,000円＋5人目から大人6,600円／子ども(3〜12歳)3,300円</b>」という積み上げ式で、これに<b>お盆加算25,000円</b>が乗り、<b>2泊目は10,000円引き</b>という計算です。加算・割引はいずれも<b>1棟あたり</b>（料金表で「/1名」と明記されているのは追加人数だけなので、書き分けから判断できます）。<span class="tbd">要確認</span> 残るのは<b>1泊あたりか滞在あたりか</b>で、高い方で計上しています。
       </div>
       <div class="desc" style="margin-top:12px;border-left:2px solid rgba(232,176,75,.5);padding-left:11px">
         <b style="color:var(--amber)">ただし、金額だけで選ぶ話ではありません。</b><br>
@@ -267,6 +267,8 @@ footer a{color:var(--ink-dim)}
     <div class="card">
       <div style="font-weight:900;margin-bottom:6px">⚠️ 3ぴーすで注意すべき点</div>
       <ul class="todo">
+        <li><span class="no">!</span><div><b>お盆加算が「1泊あたり」か「滞在あたり」か</b>
+          <span class="why">1棟あたりなのは確実ですが、泊数の扱いが不明です。滞在あたりなら25,000円安くなり、総額は¥230,400に下がります。問い合わせの一番目に聞く項目。</span></div></li>
         <li><span class="no">!</span><div><b>予約は宿泊日の6ヶ月前から</b>
           <span class="why">2027年8月に泊まるなら、受付開始は2027年2月ごろ。畑のおやどより動き出しが遅くなります。</span></div></li>
         <li><span class="no">!</span><div><b>キャンセル規定が段階的</b>
@@ -357,7 +359,7 @@ footer a{color:var(--ink-dim)}
           <tr><td>基本料金 4名まで 33,000円 × 2泊</td><td class="num"><input class="money" data-alloc="lodge" value="66000"></td></tr>
           <tr><td>追加 大人3名 × 6,600円 × 2泊<span class="note">5人目以降が加算されます</span></td><td class="num"><input class="money" data-alloc="lodge" value="39600"></td></tr>
           <tr><td>追加 子ども3名 × 3,300円 × 2泊<span class="note">3〜12歳。3歳の次男もこの区分に入ります</span></td><td class="num"><input class="money" data-alloc="lodge" value="19800"></td></tr>
-          <tr><td>お盆加算 25,000円 × 2泊<span class="tbd">要確認</span><span class="note">1泊あたりか滞在あたりか、問い合わせて確定を</span></td><td class="num"><input class="money" data-alloc="lodge" value="50000"></td></tr>
+          <tr><td>お盆加算 25,000円 × 2泊<span class="tbd">要確認</span><span class="note">1棟あたりで確定（料金表で「/1名」と明記があるのは追加人数だけ）。残る不明点は<b style="color:var(--ink)">1泊あたりか滞在あたりか</b>。ここでは高い方（1泊あたり）で計上＝滞在あたりなら25,000円安くなります</span></td><td class="num"><input class="money" data-alloc="lodge" value="50000"></td></tr>
           <tr><td>連泊割引<span class="note">2泊目以降10,000円引き</span></td><td class="num"><input class="money" data-alloc="lodge" value="-10000"></td></tr>
 
           <tr class="grp"><td colspan="2">■ 交通<span class="tbd">台数 要決定</span></td></tr>
