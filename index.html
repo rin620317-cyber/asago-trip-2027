@@ -105,6 +105,10 @@ table.tt thead th.h1{background:linear-gradient(135deg,#6fbfdb,#4aa3c4)}
 table.tt thead th.h2{background:linear-gradient(135deg,var(--leaf-2),var(--leaf))}
 table.tt thead th.h3{background:linear-gradient(135deg,var(--sun-2),var(--sun))}
 table.tt thead th.hA{background:#7d9bd8}
+.hbadge{display:inline-grid;place-items:center;width:19px;height:19px;border-radius:50%;
+  background:#fff;font-size:11px;font-weight:900;line-height:1;margin-right:4px;vertical-align:-3px}
+th.hA .hbadge{color:#4a6bb0}
+th.hB .hbadge{color:#c14a41}
 table.tt thead th.hB{background:var(--berry)}
 td.join{background:linear-gradient(100deg,#fdf0e6,#fbe6d6)}
 td.fw{background:linear-gradient(100deg,#f3ecfb,#e9defa)}
@@ -120,8 +124,16 @@ td.free{background:repeating-linear-gradient(45deg,#fafaf4,#fafaf4 7px,#f2f2e8 7
 td.move{background:#eef7fb}
 td.meal{background:#fff7e8}
 td.big{background:#f0f8ec}
+/* A組・B組のセルは左上にバッジを出す（列見出しが見えない位置でも判別できるように） */
+td.gA,td.gB{position:relative;padding-left:32px}
 td.gA{background:#f3f6ff;border-left:3px solid #7d9bd8}
 td.gB{background:#fff2ee;border-left:3px solid var(--berry)}
+td.gA::before,td.gB::before{
+  position:absolute;left:6px;top:7px;width:20px;height:20px;border-radius:50%;
+  display:grid;place-items:center;font-size:11px;font-weight:900;color:#fff;
+  line-height:1;letter-spacing:0;box-shadow:0 2px 5px rgba(43,58,47,.22)}
+td.gA::before{content:"A";background:#7d9bd8}
+td.gB::before{content:"B";background:var(--berry)}
 .gtag{display:inline-block;font-size:9.5px;font-weight:900;letter-spacing:.05em;padding:1px 6px;
   border-radius:5px;margin-right:4px;color:#fff}
 td.gA .gtag{background:#7d9bd8}
@@ -281,8 +293,8 @@ footer{margin-top:48px;text-align:center;color:var(--ink-faint);font-size:11.5px
               <th class="h3" rowspan="2">3日目<small>帰る日</small></th>
             </tr>
             <tr>
-              <th class="hA">🛋 A組<small>宿でゴロゴロ</small></th>
-              <th class="hB">🚗 B組<small>外へおでかけ</small></th>
+              <th class="hA"><span class="hbadge">A</span> 宿でゴロゴロ<small>🛋 のんびり組</small></th>
+              <th class="hB"><span class="hbadge">B</span> 外へおでかけ<small>🚗 アクティブ組</small></th>
             </tr>
           </thead>
           <tbody>
