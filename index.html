@@ -107,6 +107,7 @@ table.tt thead th.h3{background:linear-gradient(135deg,var(--sun-2),var(--sun))}
 table.tt thead th.hA{background:#7d9bd8}
 table.tt thead th.hB{background:var(--berry)}
 td.join{background:linear-gradient(100deg,#fdf0e6,#fbe6d6)}
+td.fw{background:linear-gradient(100deg,#f3ecfb,#e9defa)}
 table.tt thead th small{display:block;font-weight:600;font-size:10.5px;opacity:.92}
 td.time{position:sticky;left:0;z-index:2;background:#f4f1e6;font-weight:900;color:var(--ink-dim);
   font-size:11px;text-align:center;white-space:nowrap;width:60px}
@@ -214,7 +215,7 @@ footer{margin-top:48px;text-align:center;color:var(--ink-faint);font-size:11.5px
       <p class="sub">2027年 ／ 兵庫県朝来市多々良木</p>
       <div class="status">📝 計画中 <span>日程はこれから</span></div>
       <div class="facts">
-        <span class="chip">👨‍👩‍👧‍👦 <b>10名</b>（大人7・小人2・幼児1）</span>
+        <span class="chip">👨‍👩‍👧‍👦 <b>10名</b>（大人7・中1・小5・3歳）</span>
         <span class="chip">🏠 <b>3世帯</b></span>
         <span class="chip">🌙 <b>2泊3日</b></span>
         <span class="chip">🆕 なみさん 合流</span>
@@ -246,7 +247,7 @@ footer{margin-top:48px;text-align:center;color:var(--ink-faint);font-size:11.5px
     <div class="sec-h"><span class="ico">📋</span><h2>今回の前提</h2></div>
     <div class="grid2">
       <div class="stat"><div class="k">日程</div><div class="v">未定<br><small>2027年のお盆は8/15が日曜。8/14(土)–16(月) か 8/15(日)–17(火) が本命</small></div></div>
-      <div class="stat"><div class="k">人数</div><div class="v">10名<br><small>大人7・小人2（12歳・10歳）・幼児1（3歳）</small></div></div>
+      <div class="stat"><div class="k">人数</div><div class="v">10名<br><small>大人7＋<b>中学生1</b>・小学生1・幼児1。宿の料金では<b>大人8名</b>扱い</small></div></div>
       <div class="stat"><div class="k">世帯</div><div class="v">3世帯<br><small>ゆう家族／ご両親・陽（同居）／仁・なみ</small></div></div>
       <div class="stat"><div class="k">泊数</div><div class="v">2泊3日<br><small>昨年の「1泊では足りない」を受けて</small></div></div>
     </div>
@@ -254,7 +255,7 @@ footer{margin-top:48px;text-align:center;color:var(--ink-faint);font-size:11.5px
       <div style="font-weight:900;margin-bottom:6px">🌱 昨年からの変更点</div>
       <div class="desc">
         <b>人数が9名 → 10名</b>（仁さんの奥様・なみさんが合流）。大人が6→7名。精算の単位は<b>3世帯</b>で、ご両親と陽さんは同居なので1世帯、仁さんは「仁・なみ」で1世帯です。<br>
-        <b>子どもは全員1つ上がります。</b>12歳・10歳・3歳。ここが料金に効く可能性があります。<br>
+        <b>長男が中学生になります。</b>宿の料金は学齢で分かれるので<b>大人8名・小学生1名・幼児1名</b>という区分になり、宿泊費が上がります。<br>
         そして<b>1泊 → 2泊</b>。中日がまるまる空くので、<b>過ごし方を2組に分ける</b>のが今年の目玉です。
       </div>
     </div>
@@ -265,15 +266,15 @@ footer{margin-top:48px;text-align:center;color:var(--ink-faint);font-size:11.5px
     <div class="sec-h"><span class="ico">🗓️</span><h2>時間割</h2></div>
     <div class="card">
       <div class="desc" style="margin-bottom:12px">
-        日程が決まっていないので<b>時刻は目安</b>です。決まっている軸は <b>16:00チェックイン</b>／<b>11:00チェックアウト</b>／<b>2日目16時からBBQ</b> の3つ。
+        日程が決まっていないので<b>時刻は目安</b>です。決まっている軸は <b>16:00チェックイン</b>／<b>11:00チェックアウト</b>／<b>2日目16時からBBQ</b>／<b>川あそびは2日目の朝</b>／<b>朝食を宿に頼むのは最終日だけ</b>。
       </div>
       <div class="ttwrap">
         <table class="tt">
           <thead>
             <tr>
               <th class="h0" rowspan="2">時間</th>
-              <th class="h1" rowspan="2">1日目<small>移動と収穫</small></th>
-              <th class="h2" colspan="2">2日目<small>まる一日。2組に分かれる</small></th>
+              <th class="h1" rowspan="2">1日目<small>移動・温泉・収穫</small></th>
+              <th class="h2" colspan="2">2日目<small>午前は全員、午後は2組</small></th>
               <th class="h3" rowspan="2">3日目<small>帰る日</small></th>
             </tr>
             <tr>
@@ -285,41 +286,40 @@ footer{margin-top:48px;text-align:center;color:var(--ink-faint);font-size:11.5px
             <tr>
               <td class="time">7:00<br>8:00</td>
               <td class="move"><span class="ev">🚗 出発</span><span class="sm">伊丹発。渋滞前に出る</span></td>
-              <td class="meal" colspan="2"><span class="ev">🍳 朝ごはん</span><span class="sm">宿の朝食オプション。全員いっしょ</span></td>
-              <td class="meal"><span class="ev">🍳 朝ごはん</span><span class="sm">洗濯を回すならこの時間</span></td>
+              <td class="join" colspan="2"><span class="ev">🍜 流しそうめん</span><span class="sm">この日の朝ごはん。流し台は宿の備品（無料）</span></td>
+              <td class="meal"><span class="ev">🍳 宿の朝ごはん</span><span class="sm">朝食を頼むのはこの日だけ</span></td>
             </tr>
             <tr>
-              <td class="time">9:00<br>10:00</td>
+              <td class="time">9:00<br>11:30</td>
               <td class="move"><span class="ev">🛣️ 移動</span><span class="sm">播但道。SAで休憩</span></td>
-              <td class="free" colspan="2"><span class="ev">☕ のんびり支度</span><span class="sm">ここでA・Bどちらに入るか最終確認</span></td>
+              <td class="join" colspan="2"><span class="ev">🏞️ 川あそび ─ 全員</span><span class="sm">宿の隣。<b>朝のうちに済ませる</b>ので日差しがまだ弱い</span></td>
               <td><span class="ev">🧳 荷造り</span><span class="sm">車に積んでおく</span></td>
             </tr>
             <tr>
-              <td class="time">10:00<br>12:00</td>
+              <td class="time">11:30<br>13:00</td>
               <td class="big"><span class="ev">🛝 公園など</span><span class="sm">ひめはな公園ほか</span></td>
-              <td class="gA"><span class="ev">ネトフリ・ハンモック</span><span class="sm">プロジェクターで映画。縁側で昼寝</span></td>
-              <td class="gB"><span class="ev">おでかけ</span><span class="sm">散策・道の駅めぐり</span></td>
+              <td class="join" colspan="2"><span class="ev">🚿 着替え・お昼</span><span class="sm">濡れ物は乾燥機へ。ここでA・Bに分かれる</span></td>
               <td><span class="ev">🗿 近場をひとつ</span><span class="sm">美術館は宿から徒歩300m</span></td>
             </tr>
             <tr>
-              <td class="time">12:00<br>13:00</td>
+              <td class="time">13:00<br>14:30</td>
               <td class="meal"><span class="ev">🍙 お昼</span><span class="sm">道の駅など</span></td>
-              <td class="gA"><span class="ev">🍜 宿で軽く</span><span class="sm">そうめんなど</span></td>
-              <td class="gB"><span class="ev">🍽️ 外で食べる</span><span class="sm">好きなところへ</span></td>
-              <td class="meal"><span class="ev">🍽️ お昼</span><span class="sm">帰り道で</span></td>
+              <td class="gA"><span class="ev">ネトフリ・昼寝</span><span class="sm">プロジェクターで映画。縁側でハンモック</span></td>
+              <td class="gB"><span class="ev">おでかけ</span><span class="sm">散策・道の駅めぐり</span></td>
+              <td><span class="ev">👋 11:00 チェックアウト</span><span class="sm">忘れ物チェック</span></td>
             </tr>
             <tr>
-              <td class="time">13:00<br>16:00</td>
-              <td class="big"><span class="ev">🏞️ 川あそび</span><span class="sm">宿の隣・浅くてゆるい流れ<br>上がったら温泉で汗を流す</span></td>
-              <td class="gA"><span class="ev">🛁 宿のお風呂・昼寝</span><span class="sm"><b>運転なし。動かない日</b><br>3歳の昼寝もここで</span></td>
+              <td class="time">14:30<br>16:00</td>
+              <td class="big"><span class="ev">♨️ よふど温泉</span><span class="sm"><b>チェックイン前にひと風呂</b>。移動の汗を落としてから宿へ</span></td>
+              <td class="gA"><span class="ev">🛁 宿のお風呂</span><span class="sm"><b>運転なし。動かない日</b><br>3歳の昼寝もここで</span></td>
               <td class="gB"><span class="ev">♨️ 銭湯・買い出し</span><span class="sm">よふど温泉など<br><b>BBQの食材はB組が調達</b></span></td>
-              <td class="move"><span class="ev">🚗 帰路</span><span class="sm">15〜16時に帰宅</span></td>
+              <td class="meal"><span class="ev">🍽️ お昼</span><span class="sm">帰り道で</span></td>
             </tr>
             <tr>
               <td class="time">16:00</td>
               <td><span class="ev">🏡 チェックイン</span><span class="sm">16:00〜。荷ほどき</span></td>
-              <td class="join" colspan="2"><span class="ev">🔥 BBQ 開始 ─ 全員合流</span><span class="sm">明るいうちから始める。火起こしは子どもの担当</span></td>
-              <td><span class="ev">👋 11:00 チェックアウト</span><span class="sm">忘れ物チェック</span></td>
+              <td class="join" colspan="2"><span class="ev">🔥 BBQ 開始 ─ 全員合流</span><span class="sm">明るいうちから。火起こしは子どもの担当</span></td>
+              <td class="move"><span class="ev">🚗 帰路</span><span class="sm">15〜16時に帰宅</span></td>
             </tr>
             <tr>
               <td class="time">16:30<br>18:00</td>
@@ -329,20 +329,20 @@ footer{margin-top:48px;text-align:center;color:var(--ink-faint);font-size:11.5px
             </tr>
             <tr>
               <td class="time">18:00<br>20:00</td>
-              <td class="meal"><span class="ev">🍲 夕ごはん</span><span class="sm">囲炉裏・鉄器鍋。BBQは中日に回す</span></td>
-              <td class="meal" colspan="2"><span class="ev">🍖 BBQ つづき</span><span class="sm">そうめん流しも</span></td>
+              <td class="meal"><span class="ev">🍛 カレー</span><span class="sm">大鍋で多めに作る。<b>余りは翌日のBBQで子どもが食べる</b></span></td>
+              <td class="meal" colspan="2"><span class="ev">🍖 BBQ つづき</span><span class="sm">前日のカレーもここで登場</span></td>
               <td></td>
             </tr>
             <tr>
               <td class="time">20:00<br>21:30</td>
               <td><span class="ev">🔭 星空・焚き火</span><span class="sm">天体望遠鏡あり</span></td>
-              <td colspan="2"><span class="ev">🎬 焚き火／映画</span><span class="sm">雨ならプロジェクター</span></td>
+              <td class="fw" colspan="2"><span class="ev">🎆 手持ち花火</span><span class="sm">そのあと焚き火。雨ならプロジェクターで映画</span></td>
               <td></td>
             </tr>
           </tbody>
         </table>
       </div>
-      <div class="ttnote">※ 横にスクロールできます。2日目だけ<b style="color:#7d9bd8">A組</b>と<b style="color:#e2685f">B組</b>に分かれ、<b>16時のBBQで合流</b>します。</div>
+      <div class="ttnote">※ 横にスクロールできます。2日目は<b>午前が全員いっしょ</b>（流しそうめん→川あそび）、<b>午後だけ</b><b style="color:#7d9bd8">A組</b>と<b style="color:#e2685f">B組</b>に分かれ、<b>16時のBBQで合流</b>します。</div>
     </div>
   </section>
 
@@ -351,8 +351,7 @@ footer{margin-top:48px;text-align:center;color:var(--ink-faint);font-size:11.5px
     <div class="sec-h"><span class="ico">👥</span><h2>2日目は2組に分かれる</h2></div>
     <div class="card" style="margin-bottom:12px">
       <div class="desc">
-        中日は<b>まる一日空きます</b>。全員で同じことをすると、誰かが必ず無理をします。<b>宿に残る組</b>と<b>外に出る組</b>に分けて、
-        <b>16時のBBQで合流</b>する形にします。<br>
+        中日の<b>午前は全員そろって川あそび</b>。分かれるのは<b>午後だけ</b>です。全員で同じことを一日続けると誰かが無理をするので、<b>宿に残る組</b>と<b>外に出る組</b>に分けて、<b>16時のBBQで合流</b>します。<br>
         <b style="color:#b8621a">狙いは、お父様に2日目の運転をさせないこと。</b>宿のお風呂で十分という人もいるはずなので、その人たちがA組に入れば運転が発生しません。
       </div>
     </div>
@@ -473,10 +472,10 @@ footer{margin-top:48px;text-align:center;color:var(--ink-faint);font-size:11.5px
         <thead><tr><th>項目</th><th class="num">金額</th></tr></thead>
         <tbody>
           <tr class="grp"><td colspan="2">■ 宿泊（2泊分・現地現金払い）</td></tr>
-          <tr><td>宿泊費 大人7名 × 10,000円 × 2泊</td><td class="num"><input class="money" data-alloc="adult" value="140000"></td></tr>
-          <tr><td>宿泊費 小人2名 × 8,000円 × 2泊<span class="tbd">要確認</span><span class="note">12歳が大人料金になると +4,000円</span></td><td class="num"><input class="money" data-alloc="kid" value="32000"></td></tr>
+          <tr><td>宿泊費 大人8名 × 10,000円 × 2泊<span class="note">長男が中学生になるため大人区分。大人7＋中学生1</span></td><td class="num"><input class="money" data-alloc="adult" value="160000"></td></tr>
+          <tr><td>宿泊費 小人1名 × 8,000円 × 2泊<span class="note">小学生は次女（10歳）のみ</span></td><td class="num"><input class="money" data-alloc="kid" value="16000"></td></tr>
           <tr><td>宿泊費 幼児1名 × 1,500円 × 2泊<span class="tbd">要確認</span><span class="note">3歳で布団が必要だと区分が変わります</span></td><td class="num"><input class="money" data-alloc="tot" value="3000"></td></tr>
-          <tr><td>朝食オプション 1,000円 × 9名 × 2回</td><td class="num"><input class="money" data-alloc="adultkid" value="18000"></td></tr>
+          <tr><td>朝食オプション 1,000円 × 9名 × <b>1回</b><span class="note">最終日の朝のみ宿に依頼。2日目の朝は流しそうめん</span></td><td class="num"><input class="money" data-alloc="adultkid" value="9000"></td></tr>
           <tr><td>生ビールサーバーなど宿のオプション<span class="note">昨年は8,300円。2泊なので多めに</span></td><td class="num"><input class="money" value="12000"></td></tr>
 
           <tr class="grp"><td colspan="2">■ 交通<span class="tbd">台数 要決定</span></td></tr>
@@ -485,12 +484,14 @@ footer{margin-top:48px;text-align:center;color:var(--ink-faint);font-size:11.5px
           <tr><td>レンタカー／カーシェア<span class="note">2泊3日は60時間前後</span></td><td class="num"><input class="money" value="22000"></td></tr>
 
           <tr class="grp"><td colspan="2">■ 食材（夕食2回）</td></tr>
-          <tr><td>BBQの肉（1回分）<span class="note">昨年はハラミ1kg＋中落ちカルビ1kg＝13,700円。10名なので増量。肉切りばさみを忘れずに</span></td><td class="num"><input class="money" value="16000"></td></tr>
-          <tr><td>もう1日の夕食の食材<span class="note">囲炉裏・鉄器鍋を使う想定</span></td><td class="num"><input class="money" value="12000"></td></tr>
+          <tr><td>BBQの肉（2日目・1回分）<span class="note">昨年はハラミ1kg＋中落ちカルビ1kg＝13,700円。10名なので増量。肉切りばさみを忘れずに</span></td><td class="num"><input class="money" value="16000"></td></tr>
+          <tr><td>初日の夕食＝カレーの材料<span class="note">大鍋で多めに。余りは翌日のBBQで子どもが食べられます</span></td><td class="num"><input class="money" value="5000"></td></tr>
+          <tr><td>流しそうめん（2日目の朝）<span class="note">そうめん・つゆ・薬味。流し台は宿の備品</span></td><td class="num"><input class="money" value="2000"></td></tr>
 
           <tr class="grp"><td colspan="2">■ 遊び・立ち寄り</td></tr>
-          <tr><td>温泉<span class="note">1日目は全員、2日目はB組のみの想定</span></td><td class="num"><input class="money" value="13000"></td></tr>
+          <tr><td>温泉<span class="note">1日目はチェックイン前に全員、2日目はB組のみ</span></td><td class="num"><input class="money" value="13000"></td></tr>
           <tr><td>入場料・施設利用</td><td class="num"><input class="money" value="6000"></td></tr>
+          <tr><td>手持ち花火<span class="note">2日目の夜。BBQのあと</span></td><td class="num"><input class="money" value="2000"></td></tr>
           <tr class="grp"><td colspan="2" style="color:var(--ink-faint);font-weight:600">※ 昼食・お土産・飲み物・おやつは各自精算のため含みません</td></tr>
         </tbody>
       </table>
@@ -511,14 +512,16 @@ footer{margin-top:48px;text-align:center;color:var(--ink-faint);font-size:11.5px
           <tr><td>レンタカー／カーシェア</td><td class="num"><input class="money" value="22000"></td></tr>
 
           <tr class="grp"><td colspan="2">■ 食材（夕食2回＋朝食2回）</td></tr>
-          <tr><td>BBQの肉（1回分）<span class="note">肉切りばさみを忘れずに</span></td><td class="num"><input class="money" value="16000"></td></tr>
-          <tr><td>もう1日の夕食の食材</td><td class="num"><input class="money" value="12000"></td></tr>
-          <tr><td>朝食の食材 × 2回<span class="note">3ぴーすは食事の提供がないので自炊</span></td><td class="num"><input class="money" value="8000"></td></tr>
+          <tr><td>BBQの肉（2日目・1回分）<span class="note">肉切りばさみを忘れずに</span></td><td class="num"><input class="money" value="16000"></td></tr>
+          <tr><td>初日の夕食＝カレーの材料<span class="note">余りは翌日のBBQで子どもが食べられます</span></td><td class="num"><input class="money" value="5000"></td></tr>
+          <tr><td>流しそうめん（2日目の朝）<span class="note">3ぴーすに流し台がなければ普通のそうめんで</span></td><td class="num"><input class="money" value="2000"></td></tr>
+          <tr><td>最終日の朝食の食材<span class="note">3ぴーすは食事の提供がないので自炊</span></td><td class="num"><input class="money" value="4000"></td></tr>
 
           <tr class="grp"><td colspan="2">■ 遊び・立ち寄り</td></tr>
           <tr><td>BBQセット（有料）× 1回<span class="note">2泊のうち1日だけBBQ</span></td><td class="num"><input class="money" value="5000"></td></tr>
           <tr><td>温泉</td><td class="num"><input class="money" value="13000"></td></tr>
           <tr><td>入場料・施設利用<span class="note">福知山城・大江山・天橋立方面など</span></td><td class="num"><input class="money" value="6000"></td></tr>
+          <tr><td>手持ち花火<span class="note">2日目の夜。BBQのあと</span></td><td class="num"><input class="money" value="2000"></td></tr>
           <tr class="grp"><td colspan="2" style="color:var(--ink-faint);font-weight:600">※ 昼食・お土産・飲み物・おやつは各自精算のため含みません</td></tr>
         </tbody>
       </table>
@@ -531,8 +534,8 @@ footer{margin-top:48px;text-align:center;color:var(--ink-faint);font-size:11.5px
       <div class="split">
         <div class="split-h">🧾 世帯ごとの目安</div>
         <div class="split-note">
-          <b>宿泊費と朝食は各自の実額</b>。それ以外の共通費は、<b>幼児は対象外</b>、<b>小学生は0.5人分</b>として数え、<b>合計8人分</b>で割っています（昨年と同じルール）。<br>
-          <b>3ぴーす案の宿泊費だけは別扱い</b>です。4名一括＋追加人数という料金体系で人数比例にならないため、宿の料金表の比率（<b>大人2：子ども1</b>、3歳も子ども区分）で全員に配分しています。
+          <b>宿泊費と朝食は各自の実額</b>。それ以外の共通費は、<b>幼児は対象外</b>、<b>小学生は0.5人分</b>、<b>中学生は大人と同じ1人分</b>として数え、<b>合計8.5人分</b>で割っています。<br>
+          <b>3ぴーす案の宿泊費だけは別扱い</b>です。4名一括＋追加人数という料金体系で人数比例にならないため、宿の料金表の比率（<b>大人2：子ども1</b>）で全員に配分しています。なお3ぴーすは<b>年齢区分（3〜12歳が子ども）</b>なので、<b>中学生の長男もこちらでは子ども料金</b>のままです。
         </div>
         <table class="st">
           <thead><tr><th>世帯</th><th class="num">宿泊まわり</th><th class="num">共通費</th><th class="num">目安</th></tr></thead>
@@ -556,8 +559,8 @@ footer{margin-top:48px;text-align:center;color:var(--ink-faint);font-size:11.5px
           <span class="why">これが決まらないと宿を押さえられません。一日一組なので最優先。</span></div></li>
         <li><span class="no">2</span><div><b>畑のおやどの空き状況を確認する</b>
           <span class="why">3ぴーすは6ヶ月前から予約可（2027年2月頃）。畑のおやどの可否を先に確定させれば、切り替えの判断が間に合います。</span></div></li>
-        <li><span class="no">3</span><div><b>12歳（中学生）の料金区分を宿に確認</b>
-          <span class="why">昨年は小人8,000円。中学生から大人料金になる宿は多く、2泊なので差は4,000円。</span></div></li>
+        <li><span class="no">3</span><div><b>中学生が大人料金でよいか宿に確認</b>
+          <span class="why">大人8名として計上済み。中学生料金の設定があれば下がります。3ぴーすは年齢区分なので12歳は子ども料金のままです。</span></div></li>
         <li><span class="no">4</span><div><b>3歳の布団の要否を確認</b>
           <span class="why">昨年は「布団なし1,500円」。3歳だと布団が必要になり区分が変わる可能性。</span></div></li>
         <li><span class="no">5</span><div><b>2泊の料金と連泊割引の有無を確認</b>
@@ -602,16 +605,22 @@ footer{margin-top:48px;text-align:center;color:var(--ink-faint);font-size:11.5px
   }
 
   /* 世帯。大人=a / 小人=k / 幼児=t */
+  /* a=大人 / j=中学生 / k=小学生 / t=幼児
+     中学生は宿によって扱いが変わる。畑のおやどは学齢で分けるので大人料金、
+     3ぴーすは年齢区分（3〜12歳）なので子ども料金。だから j を独立させている。 */
   var HOUSE = [
-    { name:'ゆう家族',   sub:'私・妻・子ども3人',  a:2, k:2, t:1 },
-    { name:'ご両親・陽', sub:'父・母・陽（同居）', a:3, k:0, t:0 },
-    { name:'仁・なみ',   sub:'ご夫婦',             a:2, k:0, t:0 }
+    { name:'ゆう家族',   sub:'私・妻・子ども3人',  a:2, j:1, k:1, t:1 },
+    { name:'ご両親・陽', sub:'父・母・陽（同居）', a:3, j:0, k:0, t:0 },
+    { name:'仁・なみ',   sub:'ご夫婦',             a:2, j:0, k:0, t:0 }
   ];
-  var HEAD = { adult:0, kid:0, tot:0 };
-  HOUSE.forEach(function(h){ HEAD.adult += h.a; HEAD.kid += h.k; HEAD.tot += h.t; });
-  HEAD.adultkid = HEAD.adult + HEAD.kid;
-  HEAD.weight   = HEAD.adult + HEAD.kid * 0.5;          // 共通費：小学生は0.5人分
-  HEAD.lodge    = HEAD.adult * 2 + HEAD.kid + HEAD.tot; // 3ぴーす：料金表の比（大人2：子ども1）
+  var HEAD = { a:0, j:0, k:0, t:0 };
+  HOUSE.forEach(function(h){ HEAD.a += h.a; HEAD.j += h.j; HEAD.k += h.k; HEAD.t += h.t; });
+  HEAD.adult    = HEAD.a + HEAD.j;                       // 畑のおやどの大人区分（中学生込み＝8名）
+  HEAD.kid      = HEAD.k;
+  HEAD.tot      = HEAD.t;
+  HEAD.adultkid = HEAD.adult + HEAD.kid;                 // 朝食の対象＝9名
+  HEAD.weight   = HEAD.adult + HEAD.kid * 0.5;           // 共通費＝8.5人分
+  HEAD.lodge    = HEAD.a * 2 + HEAD.j + HEAD.k + HEAD.t; // 3ぴーす：大人2：子ども1（中学生は子ども側）
 
   var scen = 'hata', inputs = [], defaults = [], SIG = '', KEY = '';
   var yen = function(n){ return '¥' + Math.round(n).toLocaleString('ja-JP'); };
@@ -634,19 +643,20 @@ footer{margin-top:48px;text-align:center;color:var(--ink-faint);font-size:11.5px
     var per = function(pool, head){ return head > 0 ? pool / head : 0; };
     var rows = '', sS = 0, sC = 0;
     HOUSE.forEach(function(h){
-      var stay = per(pools.adult, HEAD.adult) * h.a
+      var stay = per(pools.adult, HEAD.adult) * (h.a + h.j)
                + per(pools.kid,   HEAD.kid)   * h.k
                + per(pools.tot,   HEAD.tot)   * h.t
-               + per(pools.adultkid, HEAD.adultkid) * (h.a + h.k)
-               + per(pools.lodge, HEAD.lodge) * (h.a * 2 + h.k + h.t);
-      var com  = per(pools.common, HEAD.weight) * (h.a + h.k * 0.5);
+               + per(pools.adultkid, HEAD.adultkid) * (h.a + h.j + h.k)
+               + per(pools.lodge, HEAD.lodge) * (h.a * 2 + h.j + h.k + h.t);
+      var com  = per(pools.common, HEAD.weight) * (h.a + h.j + h.k * 0.5);
       sS += stay; sC += com;
       var wp = [];
       if (h.a) wp.push('大人' + h.a);
+      if (h.j) wp.push('中学生' + h.j);
       if (h.k) wp.push('小学生' + h.k + '×0.5');
-      var wlab = wp.join('＋') + ' ＝ ' + (h.a + h.k * 0.5) + '人分' + (h.t ? '（幼児は対象外）' : '');
+      var wlab = wp.join('＋') + ' ＝ ' + (h.a + h.j + h.k * 0.5) + '人分' + (h.t ? '（幼児は対象外）' : '');
       rows += '<tr><td class="who">' + h.name
-            + '<small>' + h.sub + '／' + (h.a + h.k + h.t) + '名</small>'
+            + '<small>' + h.sub + '／' + (h.a + h.j + h.k + h.t) + '名</small>'
             + '<small>共通費は ' + wlab + '</small></td>'
             + '<td class="num">' + yen(stay) + '</td>'
             + '<td class="num">' + yen(com) + '</td>'
